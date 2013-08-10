@@ -1,0 +1,29 @@
+{
+    "name": "p2/media-storage",
+    "description": "MediaStorage",
+    "keywords": [ "media", "storage", "symfony" ],
+    "homepage": "https://github.com/phillies2k/media-storage",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Philipp Boes",
+            "email": "mostgreedy@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "beberlei/assert": "dev-master",
+        "symfony/http-foundation": "2.3.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "suggests": {
+        "doctrine/mongodb-odm": "*"
+    },
+    "autoload": {
+        "psr-0": { "P2\\MediaStorage\\": "" }
+    },
+    "target-dir": "P2/MediaStorage",
+    "minimum-stability": "dev"
+}
