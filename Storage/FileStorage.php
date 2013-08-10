@@ -139,6 +139,11 @@ class FileStorage implements MediaStorageInterface
      */
     protected function getFilePath(MediaInterface $media)
     {
-        return $this->getUploadDirectory() . '/' . $media->getId() . '.' . $media->getFile()->guessExtension();
+        if (null === $media->getFilename()) {
+            $filename = hash('sha256', $media->getFile()->getATime()) . '.' . $media->getFile()->guessExtension();
+            $media->setFilename($filename);
+        }
+
+        return $this->getUploadDirectory() . '/' . $media->getFilename();
     }
 }

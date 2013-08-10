@@ -20,7 +20,14 @@ interface MediaInterface
     /**
      * @return string
      */
-    public function getId();
+    public function getFilename();
+
+    /**
+     * @param $filename
+     *
+     * @return MediaInterface
+     */
+    public function setFilename($filename);
 
     /**
      * @return UploadedFile
